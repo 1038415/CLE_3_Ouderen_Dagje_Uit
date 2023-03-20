@@ -1,0 +1,30 @@
+body{
+    background-color: #E3E3E3;
+    font-size: 2em;
+}
+
+h1 {
+    display: block;
+    margin: auto;
+    margin-bottom: 2%;
+    width: 7em;
+    text-align: center;
+    font-size: 3em;
+    border: 2px solid;
+    background-color: #D7C6AC;
+    border-radius: 10px;
+}
+
+.symbol {
+    height: 1em;
+    width: 1em;
+}
+
+#rotterdam {
+    width: 100vw;
+}
+
+#title-contact {
+    text-align: center;
+}
+
