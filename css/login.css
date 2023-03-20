@@ -1,3 +1,32 @@
 h1 {
-    background-color: sandybrown;
+    display: block;
+    margin: auto;
+    margin-bottom: 2%;
+    width: 7em;
+    text-align: center;
+    font-size: 3em;
+    border: 2px solid;
+    background-color: #D7C6AC;
+    border-radius: 10px;
+}
+
+.formfield {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1vw;
+    margin-inline: 30px;
+}
+
+#login-form {
+    width: 35vw;
+    margin: auto;
+    margin-top: 2%;
+
+}
+
+input {
+    height: 100px;
+    font-size: 2em;
+    text-align: center;
 }
