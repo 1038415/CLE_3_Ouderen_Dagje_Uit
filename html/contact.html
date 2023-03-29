@@ -13,10 +13,13 @@
 <body>
 
 <main>
+    <section id = backToHome>
+        <p><span class="material-icons">west</span>Terug naar homepagina</p>
+    </section>
+
     <section>
         <h1 id = title-contact>Contact</h1>
         <p>Als u vragen heeft, kunt u contact met ons maken via een van de onderstaande mogelijkheden.</p>
-        <br>
 
         <p> <img alt = phoneSymbol class = symbol src="../img/phone.png"> Telefoon: 010 032 0977</p>
 
@@ -26,11 +29,48 @@
         <div id = wijnhavenLink>
             <p> <img alt = mapSymbol class = symbol src="../img/map.png"> Hoofdlocatie: Wijnhaven 107, 3011 WN Rotterdam</p>
         </div>
+        <br>
     </section>
 
-    <section id = backToHome>
-        <p><span class="material-icons">west</span>Terug naar homepagina</p>
+    <section>
+        <p>U kunt ook deze formulier invullen.</p>
+
+        <form action="" method="post">
+            <div id = form-column>
+                <label for = "name">Voornaam:</label>
+                <input type = "text" name = "name" id = "name"/>
+
+                <label for = "lastName">Achternaam:</label>
+                <input type = "text" name = "lastName" id = "lastName"/>
+
+                <label for = "mail">Email:</label>
+                <input type = "email" name = "mail" id = "mail"/>
+
+                <label for = "number">Telefoonnummer:</label>
+                <input type = "tel" name = "number" id = "number"/>
+
+                <label for = "question">Vraag:</label>
+                <input type = "text" name = "question" id = "question"/>
+            </div>
+        </form>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <section>
         <img alt = rotterdamMap id="wijnhavenMap" src="../img/the rotterst of dams.png">

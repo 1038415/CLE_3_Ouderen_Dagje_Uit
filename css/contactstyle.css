@@ -3,18 +3,6 @@ body{
     font-size: 2em;
 }
 
-h1 {
-    display: block;
-    margin: auto;
-    margin-bottom: 2%;
-    width: 7em;
-    text-align: center;
-    font-size: 3em;
-    border: 2px solid;
-    background-color: #848484;
-    border-radius: 10px;
-}
-
 .symbol {
     height: 1em;
     width: 1em;
@@ -40,3 +28,14 @@ h1 {
     cursor: pointer;
 }
 
+
+#form-column {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+input {
+    font-size: 0.7em;
+    width: 20vw;
+}
