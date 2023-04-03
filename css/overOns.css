@@ -1,3 +1,109 @@
 body {
-    background-color: #D9DCFF;
+    margin: 0;
+    background: rgb(150,199,255);
+    background: linear-gradient(90deg, rgba(150,199,255,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+header {
+    background-image: url(../img/hogeschoolrotterdam.jpg);
+    height: 300px;
+    width: 100%;
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+}
+
+.title {
+    margin-top: 80px;
+    display: block;
+    height: 1.3em;
+    width: 7em;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 4.5em;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #96c7ff;
+}
+
+h2 {
+    font-size: xx-large;
+}
+
+p {
+    font-size: x-large;
+}
+
+.text {
+    margin: 20px;
+}
+
+.overonsImg {
+    display: flex;
+    justify-content: center;
+}
+
+.CarisiaImg {
+    border-radius: 150px;
+}
+
+.JadenImg {
+    border-radius: 150px;
+}
+
+.RaymondImg {
+    border-radius: 150px;
+}
+
+.AissaImg {
+    border-radius: 150px;
+}
+
+.Carisia {
+    font-size: x-large;
+    text-align: center;
+    margin: 30px;
+}
+
+.Jaden {
+    font-size: x-large;
+    text-align: center;
+    margin: 30px;
+}
+
+.Raymond {
+    font-size: x-large;
+    text-align: center;
+    margin: 30px;
+}
+
+.Aissa {
+    font-size: x-large;
+    text-align: center;
+    margin: 30px;
+}
+
+.text2 {
+    padding: 20px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(150,199,255,1) 100%);
+}
+
+.kleinkind {
+    width: 400px;
+    height: 400px;
+}
+
+.textAndImage {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(150,199,255,1) 100%);
+    display: flex;
+    height: 400px;
+}
+
+.textAndImage2 {
+    display: flex;
+    height: 400px;
 }
