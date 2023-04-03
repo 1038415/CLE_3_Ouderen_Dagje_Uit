@@ -2,21 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script type="text/javascript" src="../js/registreer.js" defer></script>
     <title>Registreren</title>
 </head>
 <body>
-<section id="main">
-    <div id="registreer">
-        <h1>Registreren</h1>
-        <form id="registreer-form">
-            <input type="text" placeholder="Voornaam" name="Voornaam" id="voor-field">
-            <input type="text" placeholder="Achternaam" name="Achternaam" id="achter-field">
-            <input type="text" placeholder="E-mailadres" name="E-mailadres" id="mail-field">
-            <input type="text" placeholder="Wachtwoord" name="wachtwoord" id="wachtwoord-field">
-            <input type="text" placeholder="Bevestigen" name="Bevestigen" id="bevestigen-field">
-            <input type="submit" value="Registreren">
-            <input type="submit" value="Annuleren">
-        </form>
+<section class="section">
+    <div class="container content">
+        <h2 class="title">Register With Email</h2>
+
+        <section class="columns">
+            <form class="column is-6" action="" method="post">
+
+                <!-- First Name -->
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label" for="first_name">First Name</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <input class="input" id="first_name" type="text" name="first_name"/>
+                                <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <p class="help is-danger">
+                                <?= isset($errors['first_name']) ? $errors['first_name'] : '' ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Last Name -->
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label" for="last_name">Last Name</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <input class="input" id="last_name" type="text" name="last_name"/>
+                                <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <p class="help is-danger">
+                                <?= isset($errors['last_name']) ? $errors['last_name'] : '' ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label" for="email">Email</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <input class="input" id="email" type="text" name="email"/>
+                                <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <p class="help is-danger">
+                                <?= isset($errors['email']) ? $errors['email'] : '' ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label" for="password">Password</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <input class="input" id="password" type="password" name="password"/>
+                                <span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
+                            </div>
+                            <p class="help is-danger">
+                                <?= isset($errors['password']) ? $errors['password'] : '' ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal"></div>
+                    <div class="field-body">
+                        <button class="button is-link is-fullwidth" id="geregistreerd" type="submit" name="submit">Register</button>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+
     </div>
 </section>
 </body>
