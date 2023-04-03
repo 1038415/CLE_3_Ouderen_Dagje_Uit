@@ -21,7 +21,7 @@
         <h1 id = title-contact>Contact</h1>
         <p>Als u vragen heeft, kunt u contact met ons maken via een van de onderstaande mogelijkheden.</p>
 
-        <p> <img alt = phoneSymbol class = symbol src="../img/phone.png"> Telefoon: 010 032 0977</p>
+        <p> <img alt = phoneSymbol class = symbol src="../img/phone.png"> Telefoon: 010 032 0977 <span class="material-icons" id = 'showDialog'>expand_more</span></p>
 
 
         <p> <img alt = mailSymbol class = symbol src="../img/mail.png"> Mailadres: uitjes@dagjeuit.nl</p>
@@ -60,15 +60,11 @@
     <!-- A modal dialog containing a form -->
     <dialog id="favDialog">
         <form method="dialog">
-            <label>Klopt alles?</label>
-            <div id = valueReturn>
-                <button value="nah">Cancel</button>
-                <button id="confirmBtn" value="yeah">Confirm</button>
-            </div>
+            <label>Wij zijn alleen maar telefonisch bereikbaar van 12:00 tot 17:00</label>
+            <button>Cancel</button>
         </form>
     </dialog>
-    <button id="showDialog">Show the dialog</button>
-    <div id = seeValue></div>
+    <output></output>
 
 
 

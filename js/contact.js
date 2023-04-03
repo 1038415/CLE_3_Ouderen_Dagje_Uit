@@ -4,11 +4,9 @@ let rotterdamImage
 let rotterdamLink
 let goBack
 
-let showButton
+let showModal
 let favDialog
-let outputBox
-let selectEl
-let confirmBtn
+
 
 function init()
 {
@@ -23,20 +21,10 @@ function init()
     goBack = document.getElementById('backToHome');
     goBack.addEventListener('click', homePage);
 
-    showButton = document.getElementById('send');
-    showButton.addEventListener('click', buttonShow)
-
-    favDialog = document.getElementById('favDialog');
+    showModal = document.getElementById('showDialog');
+    showModal.addEventListener("click", buttonShow)
 
 
-    outputBox = document.querySelector('output');
-
-
-    selectEl = document.getElementById('valueReturn');
-    selectEl.addEventListener('change',elSelect)
-
-
-    confirmBtn = document.getElementById('seeValue');
 }
 
 function place(event){
@@ -49,20 +37,24 @@ function homePage(event){
     document.location.href = 'index.html'
 }
 
-
-
-
-
-
-
-
-showButton.addEventListener('click', () => {
+//clicking
+function buttonShow(event) {
+    event.preventDefault()
     favDialog.showModal();
-});
+}
 
-selectEl.addEventListener('change', (e) => {
-    confirmBtn.value = selectEl.value;
-});
+favDialog = document.getElementById('favDialog');
+
+
+
+
+
+
+
+
+
+
+
 
 favDialog.addEventListener('close', () => {
     outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
