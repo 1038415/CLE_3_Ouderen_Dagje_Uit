@@ -4,16 +4,39 @@ let rotterdamImage
 let rotterdamLink
 let goBack
 
+let showButton
+let favDialog
+let outputBox
+let selectEl
+let confirmBtn
+
 function init()
 {
+    //brings you to a map
     rotterdamImage = document.getElementById('wijnhavenMap');
     rotterdamImage.addEventListener('click', place);
 
     rotterdamLink = document.getElementById('wijnhavenLink');
     rotterdamLink.addEventListener('click', place);
 
+    //brings you back to the homepage
     goBack = document.getElementById('backToHome');
     goBack.addEventListener('click', homePage);
+
+    showButton = document.getElementById('send');
+    showButton.addEventListener('click', buttonShow)
+
+    favDialog = document.getElementById('favDialog');
+
+
+    outputBox = document.querySelector('output');
+
+
+    selectEl = document.getElementById('valueReturn');
+    selectEl.addEventListener('change',elSelect)
+
+
+    confirmBtn = document.getElementById('seeValue');
 }
 
 function place(event){
@@ -26,4 +49,22 @@ function homePage(event){
     document.location.href = 'index.html'
 }
 
+
+
+
+
+
+
+
+showButton.addEventListener('click', () => {
+    favDialog.showModal();
+});
+
+selectEl.addEventListener('change', (e) => {
+    confirmBtn.value = selectEl.value;
+});
+
+favDialog.addEventListener('close', () => {
+    outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
+});
 

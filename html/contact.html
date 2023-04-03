@@ -51,11 +51,24 @@
 
                 <label for = "question">Vraag:</label>
                 <input type = "text" name = "question" id = "question"/>
+
+                <input type="submit" name="send" id="send">
             </div>
         </form>
     </section>
 
-
+    <!-- A modal dialog containing a form -->
+    <dialog id="favDialog">
+        <form method="dialog">
+            <label>Klopt alles?</label>
+            <div id = valueReturn>
+                <button value="nah">Cancel</button>
+                <button id="confirmBtn" value="yeah">Confirm</button>
+            </div>
+        </form>
+    </dialog>
+    <button id="showDialog">Show the dialog</button>
+    <div id = seeValue></div>
 
 
 
