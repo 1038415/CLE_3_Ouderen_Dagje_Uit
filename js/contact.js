@@ -6,6 +6,7 @@ let goBack
 
 let showModal
 let favDialog
+let modalCloseButton
 
 
 function init()
@@ -24,7 +25,11 @@ function init()
     showModal = document.getElementById('showDialog');
     showModal.addEventListener("click", buttonShow)
 
+    modalCloseButton = document.getElementById('modalClose');
+    modalCloseButton.addEventListener('click', closeModal);
 
+    favDialog = document.getElementById('favDialog');
+    favDialog.addEventListener('close', closeModal)
 }
 
 function place(event){
@@ -43,10 +48,10 @@ function buttonShow(event) {
     favDialog.showModal();
 }
 
-favDialog = document.getElementById('favDialog');
-
-
-
+function closeModal(event) {
+    event.preventDefault();
+    favDialog.close();
+}
 
 
 
