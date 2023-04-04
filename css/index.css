@@ -13,6 +13,7 @@ body {
 }
 
 .text {
+    text-align: center;
     margin-top: 100px;
     margin-left: 300px;
     margin-right: 300px;
@@ -70,4 +71,5 @@ body {
 
 .buttons {
     display: flex;
+    justify-content: center;
 }
