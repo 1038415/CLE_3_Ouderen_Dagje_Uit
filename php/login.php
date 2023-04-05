@@ -1,5 +1,5 @@
 <?php
-require_once "databaseQuery.php";
+require_once "../php/databaseQuery.php";
 
 // Server-side validation
 $username = mysqli_real_escape_string($conn, $_POST['username']);

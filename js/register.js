@@ -18,12 +18,12 @@ form.addEventListener('submit', (event) => {
 
     // Send data to server using AJAX
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'register.php');
+    xhr.open('POST', '../php/register.php');
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = () => {
         if (xhr.status === 200) {
             alert(xhr.responseText);
-            window.location.href = 'login.html';
+            window.location.href = '../html/login.html';
         } else {
             alert('Error registering user');
         }

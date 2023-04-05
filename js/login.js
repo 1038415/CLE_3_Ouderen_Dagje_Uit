@@ -17,7 +17,7 @@ form.addEventListener('submit', (event) => {
 
     // Send data to server using AJAX
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'login.php');
+    xhr.open('POST', '../php/login.php');
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = () => {
         if (xhr.status === 200) {
@@ -26,7 +26,7 @@ form.addEventListener('submit', (event) => {
                 localStorage.setItem('isLoggedIn', true);
                 localStorage.setItem('username', username);
                 // Redirect to home page
-                window.location.href = 'logout.html';
+                window.location.href = '../html/index.html';
             } else {
                 loginResult.innerText = xhr.responseText;
             }
@@ -51,5 +51,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 registerBtn.addEventListener('click', () => {
-    window.location.href = 'register.html';
+    window.location.href = '../html/register.html';
 });
