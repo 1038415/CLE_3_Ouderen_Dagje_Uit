@@ -2,7 +2,6 @@ const form = document.querySelector('#login-form');
 const loginResult = document.querySelector('#login-result');
 const registerBtn = document.querySelector('#register-btn');
 
-
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
