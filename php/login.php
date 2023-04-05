@@ -1,91 +1,31 @@
 <?php
-/**
- * @return array
- */
-function getPerson()
-{
-    return [
-        [
-            "id" => 1,
-            "name" => "Pier",
+require_once "databaseQuery.php";
 
-        ],
-        [
-            "id" => 2,
-            "name" => "Helma",
+// Server-side validation
+$username = mysqli_real_escape_string($conn, $_POST['username']);
+$password = mysqli_real_escape_string($conn, $_POST['password']);
 
-        ],
-        [
-            "id" => 3,
-            "name" => "Renske",
-
-        ],
-        [
-            "id" => 4,
-            "name" => "Klazina",
-
-        ],
-        [
-            "id" => 5,
-            "name" => "Rafaël",
-
-        ],
-        [
-            "id" => 6,
-            "name" => "Milou",
-
-        ],
-        [
-            "id" => 7,
-            "name" => "Brecht",
-
-        ],
-        [
-            "id" => 8,
-            "name" => "Richard",
-
-        ],
-        [
-            "id" => 9,
-            "name" => "Isabelle",
-
-        ],
-        [
-            "id" => 10,
-            "name" => "Bart",
-
-        ]
-    ];
+if (empty($username) || empty($password)) {
+    die('Please fill in all fields');
 }
 
-/**
- * @param $id
- * @return mixed
- */
-function getDishDetails($id)
-{
-    $tags = [
-        1 => [
-            "recipe" => "Put it in the oven and go!",
-            "tags" => ['cheese', 'oven']
-        ],
-        2 => [
-            "recipe" => "You can make this delicious Dutch meal by ...",
-            "tags" => ['unox', 'healthy', 'stamppot', 'boerenkool']
-        ],
-        3 => [
-            "recipe" => "Very nice when your grandma prepares this meal",
-            "tags" => ['omnomnom']
-        ],
-        4 => [
-            "recipe" => "Everytime in the city after midnight",
-            "tags" => ['kapsalon', 'tasty', 'meat']
-        ],
-        5 => [
-            "recipe" => "Specialty when on holiday in Spain",
-            "tags" => ['fish']
-        ],
-    ];
-
-    return $tags[$id];
+// Check if user exists and password is correct
+$sql = "SELECT * FROM users WHERE first_name='$username'";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    if (password_verify($password, $row['password'])) {
+        // Password is correct, create session and redirect to home page
+        $_SESSION['user_id'] = $row['id'];
+        $_SESSION['username'] = $username;
+        echo 'success';
+    } else {
+        // Password is incorrect
+        die('Incorrect wachtwoord');
+    }
+} else {
+    // User doesn't exist
+    die('User not found');
 }
+
+mysqli_close($conn);
