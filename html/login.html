@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="../css/login.css">
+<link rel="stylesheet" href="../css/login.css">
 <head>
     <meta charset="UTF-8">
     <script type="text/javascript" src="../js/login.js" defer></script>
-    <title>Inloggen</title>
+    <title>Login</title>
 </head>
 <body>
-<h1>Inloggen</h1>
-<section id="main">
-    <div id="login">
-        <form id="login-form">
-            <div class="formfield">
-            <input type="text" placeholder="Gebruikersnaam" name="gebruikersnaam" id="gebruikers-field">
-            </div>
-            <div class="formfield">
-            <input type="password" placeholder="Wachtwoord" name="wachtwoord" id="wachtwoord-field">
-            </div>
-            <div class="formfield">
-            <input type="submit" value="Inloggen" id="login-submit">
-            </div>
-            <a href="registreren.html" id="register">Registreren</a>
-            <a href="wachtwoordVergeten.html" id="forgot">Wachtwoord vergeten</a>
-        </form>
-    </div>
-</section>
-
 <a href="index.html">&#8592 Terug naar hoofdpagina</a>
+<h1>Inloggen</h1>
+<form id="login-form" method="POST">
+
+    <input type="text" id="username" name="username" placeholder="Gebruikersnaam" required>
+
+    <input type="password" id="password" name="password" placeholder="Wachtwoord" required>
+
+    <div id="login-result"></div>
+
+    <button type="submit">Inloggen</button>
+
+    <button type="button" id="register-btn">Registreren</button>
+
+</form>
+
+
+
 </body>
 </html>

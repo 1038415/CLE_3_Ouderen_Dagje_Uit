@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../css/register.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../js/register.js" defer></script>
+    <title>Register</title>
+</head>
+<body>
+<h1>Registreren</h1>
+<form id="registration-form" method="POST">
+    <div>
+    <input type="text" id="first-name" name="first-name" placeholder="Voornaam" required>
+
+    <input type="text" id="last-name" name="last-name" placeholder="Achternaam" required>
+    </div>
+    <input type="email" id="email" name="email" placeholder="E-mailadres" required>
+
+    <div>
+    <input type="password" id="password" name="password" placeholder="Wachtwoord" required>
+
+    <input type="password" id="password-verify" name="password-verify" placeholder="Herhaal wachtwoord" required>
+    </div>
+
+    <button type="submit">Registreer</button>
+    <button type="button" id="cancel-btn">Annuleer</button>
+</form>
+</body>
+</html>
