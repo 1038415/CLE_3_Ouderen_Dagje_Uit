@@ -2,120 +2,57 @@
 
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="../css/styleUitjes.css">
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet0" href="/css/styleUitjes.css">
 <script src="uitjes.js"></script>
 <body>
 
 <!-- Sidebar -->
-<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-    <a href="#" class="w3-bar-item w3-button">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button">Link 3</a>
-</div>
-
-<!-- Page Content -->
-<div class="w3-teal"> <!-- w3-teal-->
-    <!-- w3-button w3-teal w3-xlarge-->
-    <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">open sidebar</button>
-    <!-- w3-container-->
-    <div class="w3_container">
-        <h1>My Page</h1>
-    </div>
-</div>
-
-    <!-- w3-container-->
-<div class="w3_container">
-    <!DOCTYPE html>
-    <html>
-
-    <body>
-
-    <h2>Filter DIV Elements</h2>
+<h1>Uitjes</h1>
+<div class="" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="">Close &times;</button>
+    <h2>Filteren beperkingen</h2>
 
     <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-        <button class="btn" onclick="filterSelection('cars')"> Lopen</button>
-        <button class="btn" onclick="filterSelection('animals')"> Staan</button>
-        <button class="btn" onclick="filterSelection('fruits')"> Zien</button>
-        <button class="btn" onclick="filterSelection('colors')"> Horen</button>
+        <button class="btn active" onclick="filterSelection('all')">Toon alle museums</button>
+        <button class="btn" onclick="filterSelection('walk')"> <img src="../img/disablilitiesIcons/walk.png" alt="walk.png" class="image"><img/> <br>Lopen </button>
+        <button class="btn" onclick="filterSelection('stand')"> <img src="../img/disablilitiesIcons/stand.png" alt="stand.png" class="image"> <br>Staan </button>
+        <button class="btn" onclick="filterSelection('vision')"> <img src="../img/disablilitiesIcons/sight.png" alt="vision.png" class="image"> <br>Zien </button>
+        <button class="btn" onclick="filterSelection('hearing')"> <img src="../img/disablilitiesIcons/hearing.png" alt="sight.png" class="image"> <br>Horen </button>
     </div>
 
     <div class="container">
-        <div class="filterDiv cars">BMW</div>
-        <div class="filterDiv colors fruits">Orange</div>
-        <div class="filterDiv cars">Volvo</div>
-        <div class="filterDiv colors">Red</div>
-        <div class="filterDiv cars animals">Mustang</div>
-        <div class="filterDiv colors">Blue</div>
-        <div class="filterDiv animals">Cat</div>
-        <div class="filterDiv animals">Dog</div>
-        <div class="filterDiv fruits">Melon</div>
-        <div class="filterDiv fruits animals">Kiwi</div>
-        <div class="filterDiv fruits">Banana</div>
-        <div class="filterDiv fruits">Lemon</div>
-        <div class="filterDiv animals">Cow</div>
+        <div class="filterDiv walk">Museum 1</div>
+        <div class="filterDiv hearing vision">Museum 2</div>
+        <div class="filterDiv walk">Museum 3</div>
+        <div class="filterDiv hearing">Museum 4</div>
+        <div class="filterDiv walk stand">Museum 5</div>
+        <div class="filterDiv hearing">Museum 6</div>
+        <div class="filterDiv stand">Museum 7</div>
+        <div class="filterDiv stand">Museum 8</div>
+        <div class="filterDiv vision">Museum 9</div>
+        <div class="filterDiv vision stand">Museum 10</div>
+        <div class="filterDiv vision">Museum 11</div>
+        <div class="filterDiv vision">Museum 12</div>
+        <div class="filterDiv stand">Museum 13</div>
     </div>
+</div>
 
-    <script>
-        filterSelection("all")
-        function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName("filterDiv");
-            if (c == "all") c = "";
-            for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-            }
-        }
 
-        function w3AddClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-            }
-        }
+    <button class="" onclick="w3_open()">open sidebar</button>
 
-        function w3RemoveClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                while (arr1.indexOf(arr2[i]) > -1) {
-                    arr1.splice(arr1.indexOf(arr2[i]), 1);
-                }
-            }
-            element.className = arr1.join(" ");
-        }
 
-        // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function(){
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
-    </script>
+    <!-- w3-container-->
 
-    </body>
-    </html>
-
+<!-- map -->
 
     <iframe
             width="100%"
-            height="500px"
+            height="800px"
             src='https://api.mapbox.com/styles/v1/jaden-birginia/clg3far5x005x01p0pjjmxmd0.html?title=view&access_token=pk.eyJ1IjoiamFkZW4tYmlyZ2luaWEiLCJhIjoiY2xnMnFjOXZuMDd5YjNrcGh5ZDdodmZ5aSJ9.zXfzMD77W_UxerEeWgvENg&zoomwheel=true&fresh=true#2/37.75/-92.25'
             title="Streets"
             style="border:none;"
     ></iframe>
-</div>
-
 </body>
 </html>
