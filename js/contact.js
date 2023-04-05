@@ -8,6 +8,9 @@ let showModal
 let favDialog
 let modalCloseButton
 
+let form
+let numbers = []
+
 
 function init()
 {
@@ -22,6 +25,7 @@ function init()
     goBack = document.getElementById('backToHome');
     goBack.addEventListener('click', homePage);
 
+    //modal
     showModal = document.getElementById('showDialog');
     showModal.addEventListener("click", buttonShow)
 
@@ -30,6 +34,13 @@ function init()
 
     favDialog = document.getElementById('favDialog');
     favDialog.addEventListener('close', closeModal)
+
+    //save into local storage
+    form = document.getElementById('form');
+    numbers = document.getElementById('number');
+
+    fillFieldsFromLocalStorage();
+    form.addEventListener('submit', submitHandler);
 }
 
 function place(event){
@@ -42,7 +53,6 @@ function homePage(event){
     document.location.href = 'index.html'
 }
 
-//clicking
 function buttonShow(event) {
     event.preventDefault()
     favDialog.showModal();
@@ -53,6 +63,16 @@ function closeModal(event) {
     favDialog.close();
 }
 
+function fillFieldsFromLocalStorage() {
+    if (localStorage.getItem('number') !== null) {
+        numbers.value = localStorage.getItem('number');
+    }
+}
+
+function submitHandler(e) {
+    e.preventDefault();
+    localStorage.setItem('number', JSON.stringify(numbers));
+}
 
 
 
@@ -61,7 +81,37 @@ function closeModal(event) {
 
 
 
-favDialog.addEventListener('close', () => {
-    outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
