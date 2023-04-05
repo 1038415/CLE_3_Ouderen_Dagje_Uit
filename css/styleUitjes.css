@@ -4,6 +4,12 @@
     background-color: #FFE1A6;
 }
 
+a {
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-size: 2vw;
+}
     /* outside sidebar */
 
 /* images */
