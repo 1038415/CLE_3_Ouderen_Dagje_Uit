@@ -28,6 +28,12 @@ header {
     background-color: #96c7ff;
 }
 
+.terugNaarHome {
+    margin: 30px;
+    font-size: xx-large;
+    color: black;
+}
+
 h2 {
     font-size: xx-large;
 }
